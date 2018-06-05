@@ -17,7 +17,7 @@ public class FahrenheitTemperature implements Temperature{
     }
 
     public void setValue(double value) throws Exception{
-        if(value < ZERO) throw new Exception("N�o h� temperatura abaixo do zero absoluto");
+        if(value < ZERO) throw new Exception("Nao ha temperatura abaixo do zero absoluto");
         else this.value = value;
     }
 

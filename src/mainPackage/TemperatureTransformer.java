@@ -20,7 +20,8 @@ public class TemperatureTransformer{
     private Temperature convertToCelsius(Temperature fahrenheit) throws Exception{
         CelsiusTemperature c = new CelsiusTemperature();
         double fvalue = fahrenheit.getValue();
-        double cvalue = (5/9)*fvalue-5*fahrenheit.getFREEZE();// formulinha 2 ?!
+        //double cvalue = ((fvalue-(fahrenheit.getFREEZE() * -1)) / (9/5));
+        double cvalue = (fvalue - fahrenheit.getFREEZE()) / (1.8);// formulinha 2 ?!
         c.setValue(cvalue);
         return c;
     }
